@@ -131,7 +131,6 @@ colnames(cs.stats) <- c("Chromosome","Assembled","Sequenced");
 rownames(cs.stats) <- cs.stats$Chromosome;
 cs.stats$startPoint <- c(0,cumsum(as.numeric(cs.stats$Assembled)))[-length(cs.stats$Assembled)];
 
-# takes about 10s on melinus with T1D data
 cat("Reading data file...", file = stderr());
 retVal = grep(pattern = "marker", x = readLines(gzfile(dataFile), n = 1), ignore.case = TRUE);
 marker.statistics <- NULL;

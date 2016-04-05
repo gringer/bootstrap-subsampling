@@ -1,8 +1,6 @@
 #!/usr/bin/Rscript
 
-## Author: David Eccles (gringer), 2007 <programming@gringer.org>
-
-source('/itsshared/phd/common.r');
+## Author: David Eccles (gringer), 2007-2016 <bioinformatics@gringene.org>
 
 #usage ./structure2pdf.r <file> <name1> <break1> <name2> <break2> ... <nameN>
 
@@ -29,6 +27,30 @@ usage <- function(){
   cat("-labelaxis          : Place population labels on the axis\n");
   cat("c<name>             : Set the colour for the next population to <name>\n");
   cat("\n");
+}
+
+## bgShade -- makes a shaded fill on a plot (fills a band in the x direction)
+bgShade <- function(fromX, toX, levels = 40, color.palette = cm.colors, cl = color.palette(levels), density = NA){
+  rect(fromX,-0.01,toX,1/levels,col = cl[1], density=density, border = NA,
+       lwd = 2);
+  if(levels>2){
+    for(x in 3:levels-2){
+      if(x < (levels / 2)){
+        ag = 45;
+      }
+      else{
+        ag = 135;
+      }
+      rect(fromX,(x) * 1/levels,toX,(x+1) * 1/levels,
+           col = cl[x+1], density=density, angle = ag, border = NA, lwd = 2);
+    }
+  }
+  rect(fromX,1-1/levels,toX, 1.01, col = cl[levels],
+       density=density, angle = 135, border = NA, lwd = 2);
+}
+
+seq1 <- function(length.out = 10){
+  return(seq(0,1,length.out = length.out));
 }
 
 invertOrder <- function(x){
@@ -224,7 +246,7 @@ if(infile.name == FALSE){
     ## Assume "_q"-style file
     ## NOTE: "_q" files seem to have 1 d.p. more precision in results
     seek(infile.con, 0);
-    infile.df <- read.table(infile.con, row.names = 1);
+    infile.df <- read.table(infile.con)[,-1]; ## remove first column (IDs)
   }
   rm(tmpLines);
   close(infile.con);
@@ -306,15 +328,15 @@ if(sortByQ){ # sort based on max Q within each population
     ## Sort 1 -- Q > 0.5
     indLargeQpos <- apply((tmp.df > 0.5) *
                           rep(seq(1,dim(tmp.df)[2]),
-                              each = dim(tmp.df[1])),1,max);
+                              each = dim(tmp.df)[1]),1,max);
     ## Sort 2 -- greater than mean Q
     indMeanQpos <- apply((tmp.df > apply(tmp.df,1,mean))*
                         rep(seq(1,dim(tmp.df)[2]),
-                            each = dim(tmp.df[1])),1,max);
+                            each = dim(tmp.df)[1]),1,max);
     ## Sort 3 -- max Q
     indMaxQpos <- apply((tmp.df == apply(tmp.df,1,max))*
                         rep(seq(1,dim(tmp.df)[2]),
-                            each = dim(tmp.df[1])),1,max);
+                            each = dim(tmp.df)[1]),1,max);
     maxCounts <- # how many times a population is max for each individual
       colSums((tmp.df) == apply(tmp.df,1,max));
     ## Make sure populations with the same counts don't end up alternating
