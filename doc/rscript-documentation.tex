@@ -1,0 +1,544 @@
+\section{agrf2simplegt.r}
+\label{sec:agrf2simplegt.r}
+
+\subsection{Overview}
+\label{sec:agrf2simplegt.r-overview}
+
+\begin{description}
+\item[Usage] ./agrf2simplegt.r <input file>
+\item[Purpose] Convert a three-column Excel file from AGRF into a simplegenotype file (similar to those used in the HapMap samples)
+\item[Lines of Code] 42
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:agrf2simplegt.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{bootstrap.r}
+\label{sec:bootstrap.r}
+
+\subsection{Overview}
+\label{sec:bootstrap.r-overview}
+
+\begin{description}
+\item[Usage] ./bootstrap.r<case/control column file> [options]
+\item[Purpose] runs a bootstrap process across a genotype file
+\item[Lines of Code] 482
+\item[File size] 21 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:bootstrap.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-input] File containing genotype data
+\item[-controlfile] File containing column data for cases/controls
+\item[-repfiles <f1> <f2>] Files containing replicate columns (for repeat experiments)
+\item[-controlsfirst] case/control file has controls as first line
+\item[-count] Number of bootstrapts to carry out
+\item[-casereps] case subpopulation size for boostraps (overrides proportion)
+\item[-controlreps] control subpopulation size for boostraps (overrides proportion)
+\item[-proportion] proportion of individuals for boostraps (currently ", replicates.proportion,")
+\item[-sort] sort bootstrap results by value
+\item[-strictGT] Keep complementary alleles separate (don't combine)
+\item[-strictChi] Respect zero counts in $\chi^2$ table, creates null results
+\item[-output] output file for results
+\item[-method] method to use for calculating results
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{bs2meancalc.r}
+\label{sec:bs2meancalc.r}
+
+\subsection{Overview}
+\label{sec:bs2meancalc.r-overview}
+
+\begin{description}
+\item[Usage] ./bs2meanvar.r <file> [options]
+\item[Purpose] calculates mean / SD from bootstrap summary results
+\item[Lines of Code] 95
+\item[File size] 3 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:bs2meancalc.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{contour-MA.r}
+\label{sec:contour-MA.r}
+
+\subsection{Overview}
+\label{sec:contour-MA.r-overview}
+
+\begin{description}
+\item[Usage] ./contour_MA.r <file>
+\item[Purpose] converts a delta summary file into a Minor Allele Frequency contour graph.
+\item[Lines of Code] 81
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:contour-MA.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{csplot.r}
+\label{sec:csplot.r}
+
+\subsection{Overview}
+\label{sec:csplot.r-overview}
+
+\begin{description}
+\item[Usage] ./csplot.r <file> [options]
+\item[Purpose] generates a chromosome "manhattan" plot for a genome-wide statistic
+\item[Lines of Code] 224
+\item[File size] 10 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:csplot.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-threshold <value>] Only display data greater than <value>
+\item[-pointsize <value>] Multiplier for size of points in graph
+\item[-invert] Invert values (lowest value at top of graph)
+\item[-normlimit] Limit value display to a reasonable normal distribution
+\item[-limit <value>] Trim values greater than <limit>
+\item[-keep <value>] Keep a proportion of values below the cutoff value
+\item[-label <string>] Label for Y axis
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{data2plot.r}
+\label{sec:data2plot.r}
+
+\subsection{Overview}
+\label{sec:data2plot.r-overview}
+
+\begin{description}
+\item[Usage] cat <file> | ./data2plot.r( p<name> <range from> <range to>)*
+\item[Purpose] takes as input a space-separated text file, converts it into a plot
+\item[Lines of Code] 26
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:data2plot.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{distvals.r}
+\label{sec:distvals.r}
+
+\subsection{Overview}
+\label{sec:distvals.r-overview}
+
+\begin{description}
+\item[Usage] ./distvals.r <file>
+\item[Purpose] generates a genotype distance matrix from genotype data
+\item[Lines of Code] 22
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:distvals.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{error.r}
+\label{sec:error.r}
+
+\subsection{Overview}
+\label{sec:error.r-overview}
+
+\begin{description}
+\item[Usage] ./error.r<file> <Case/Control Split location> [-flip]]
+\item[Purpose] generates error plot (false/true positive/negative) for a diagnostic test
+\item[Lines of Code] 156
+\item[File size] 7 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:error.r-command-line}
+
+\begin{description}
+\item[-help] show only this screen
+\item[-flip] invert positive/negative classification
+\item[-vline <float>] place a vertical line at <location>
+\item[-hline <float>] place a horizontal line at <location>
+\item[-batch] batch mode output
+\item[-header] display batch mode header
+\item[-roc] ROC analysis, with AUC calculation
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{gt2plink.r}
+\label{sec:gt2plink.r}
+
+\subsection{Overview}
+\label{sec:gt2plink.r-overview}
+
+\begin{description}
+\item[Usage] ./gt2plink.r<input file> <map file> [options]
+\item[Purpose] Convert from simplegt-formatted file to plink rotated input files
+\item[Lines of Code] 186
+\item[File size] 7 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gt2plink.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-output] output base file name
+\item[-t <character>] map file separator character
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{gt2pw.r}
+\label{sec:gt2pw.r}
+
+\subsection{Overview}
+\label{sec:gt2pw.r-overview}
+
+\begin{description}
+\item[Usage] ./gt2pw.r <simplegt file> [options]
+\item[Purpose] Calculate allele sharing values across all markers for all individuals in the input file
+\item[Lines of Code] 224
+\item[File size] 9 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gt2pw.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-clustersize] Number of parallel processes
+\item[-usempi] Use MPI for parallel cluster
+\item[-makeimage] Create an image after calculating matrix
+\item[-dendrogram] Create a sorted dendrogram after matrix
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{icdiff.r}
+\label{sec:icdiff.r}
+
+\subsection{Overview}
+\label{sec:icdiff.r-overview}
+
+\begin{description}
+\item[Usage] ./icdiff.r
+\item[Purpose] Calculate information content difference for fastphase-formatted genotype file
+\item[Lines of Code] 205
+\item[File size] 8 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:icdiff.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-hapmap3] Hapmap phase 3 formatted Files
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{infocred.r}
+\label{sec:infocred.r}
+
+\subsection{Overview}
+\label{sec:infocred.r-overview}
+
+\begin{description}
+\item[Usage] ./infocred.r<file> <split point> [options]
+\item[Purpose] carries out a difference-of-means test for difference between two populations
+\item[Lines of Code] 255
+\item[File size] 10 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:infocred.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{markercount2pdf.r}
+\label{sec:markercount2pdf.r}
+
+\subsection{Overview}
+\label{sec:markercount2pdf.r-overview}
+
+\begin{description}
+\item[Usage] ./markercount2pdf.r <file>
+\item[Purpose] generates plot of marker counts versus number of bootstraps
+\item[Lines of Code] 19
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:markercount2pdf.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{njfilter.r}
+\label{sec:njfilter.r}
+
+\subsection{Overview}
+\label{sec:njfilter.r-overview}
+
+\begin{description}
+\item[Usage] ./njfilter.r <Genotype file> -s <split point> [<SNP ranking file>] [options]
+\item[Purpose] iteratively adds SNPs that don't have a genotype profile similar to SNPs already added to a set of informative SNPs
+\item[Lines of Code] 188
+\item[File size] 8 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:njfilter.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{poscounts.r}
+\label{sec:poscounts.r}
+
+\subsection{Overview}
+\label{sec:poscounts.r-overview}
+
+\begin{description}
+\item[Usage] ./poscounts.r <structure \"q\" file> -s <split point> [options]
+\item[Purpose] determine clinical parameters for structure file outputs TP: True positive (count of "positive" results that are clinically positive) FN: False negative (count of "negative" results that are clinically positive) TN: True negative (count of "negative" results that are clinically negative) FP: False positive (count of "positive" results that are clinically negative)
+\item[Lines of Code] 95
+\item[File size] 3 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:poscounts.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{pwmatrix2pdf.r}
+\label{sec:pwmatrix2pdf.r}
+
+\subsection{Overview}
+\label{sec:pwmatrix2pdf.r-overview}
+
+\begin{description}
+\item[Usage] ./pwmatrix2pdf.r <top/right file> [bottom/left file]
+\item[Purpose] Converts a pairwise matrix (such as that generated from gt2pw.r) into a heatmap PDF file.
+\item[Lines of Code] 422
+\item[File size] 17 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:pwmatrix2pdf.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-ignore (value)*] Ignore particular individuals
+\item[-svg] Output to an SVG file
+\item[-bitmap] Output to a bitmap (XPM) file
+\item[-image] Create a more customisable image
+\item[-invert <value>] Create a similarity matrix (value is no. of alleles)
+\item[-nolabels] Don't output population labels
+\item[-norects] Don't draw squares around populations
+\item[-dendrogram] Sort, and draw a dendrogram / tree
+\item[-heatmap] Use the built-in heatmap function
+\item[-noscale] Don't scale bottom half to range of top half
+\item[-outliers <value>] Ignore values outside specified probability
+\item[-size <value>] Change label size
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{pwsummary2pdf.r}
+\label{sec:pwsummary2pdf.r}
+
+\subsection{Overview}
+\label{sec:pwsummary2pdf.r-overview}
+
+\begin{description}
+\item[Usage] ./pwsummary2pdf.r <top/right file> [bottom/left file]
+\item[Purpose] Converts a pairwise summary (such as that generated from pwsummary.txt in 2_maximal.pl) into a heatmap PDF file
+\item[Lines of Code] 317
+\item[File size] 12 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:pwsummary2pdf.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{recombine.r}
+\label{sec:recombine.r}
+
+\subsection{Overview}
+\label{sec:recombine.r-overview}
+
+\begin{description}
+\item[Usage] ./recombine.r
+\item[Purpose] carries out a simulated recombination of chromosomes
+\item[Lines of Code] 254
+\item[File size] 9 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:recombine.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{snpblaster.r}
+\label{sec:snpblaster.r}
+
+\subsection{Overview}
+\label{sec:snpblaster.r-overview}
+
+\begin{description}
+\item[Usage] ./snpblaster.r <file> [-size <windowSize>]\\
+  Expects a CSV file with headings: [Marker],Delta,Mutation,Chromosome,Location
+\item[Purpose] Calculates location differences to determine which markers can be removed without much loss
+\item[Lines of Code] 52
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpblaster.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{snpchip2fst.r}
+\label{sec:snpchip2fst.r}
+
+\subsection{Overview}
+\label{sec:snpchip2fst.r-overview}
+
+\begin{description}
+\item[Usage] ./snpchip2fst.r<file> (p<name> <range from> <range to>)+ [options]
+\item[Purpose] calculates F statistics from a simplegt file
+\item[Lines of Code] 153
+\item[File size] 6 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpchip2fst.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{snpchip2gtmap.r}
+\label{sec:snpchip2gtmap.r}
+
+\subsection{Overview}
+\label{sec:snpchip2gtmap.r-overview}
+
+\begin{description}
+\item[Usage] ./snpchip2gtmap.r <genotype file> <SNP location file>
+\item[Purpose] Creates a chromosome location diagram for a sequence of SNPs, with a genotype summary below
+\item[Lines of Code] 141
+\item[File size] 5 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpchip2gtmap.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{stats2contour.r}
+\label{sec:stats2contour.r}
+
+\subsection{Overview}
+\label{sec:stats2contour.r-overview}
+
+\begin{description}
+\item[Usage] ./stats2contour.r <file>
+\item[Purpose] converts a delta summary file into a Minor Allele Frequency contour graph
+\item[Lines of Code] 33
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:stats2contour.r-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{structure2pdf.r}
+\label{sec:structure2pdf.r}
+
+\subsection{Overview}
+\label{sec:structure2pdf.r-overview}
+
+\begin{description}
+\item[Usage] ./structure2pdf.r<file>( p<name> <range from> <range to>)* [options]
+\item[Purpose] generates box/dot plot for results from structure
+\item[Lines of Code] 500
+\item[File size] 18 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:structure2pdf.r-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-gdionly   [K=2]] Only calculate Genome Diagnostic Index
+\item[-line <value>] Draw a horizontal line at <value>
+\item[-sort] Sort individuals by Q values
+\item[-basicsort] Sort individuals strictly by Q values
+\item[-barplot   [K=2]] Always do a barplot (rather than scatterplot)
+\item[-error     [k=2]] Show error bars from \"_f\" file
+\item[-mean      [K=2]] Draw mean and SE lines for each popualtion
+\item[-noshade   [K=2]] Don't draw background coloured stripes
+\item[-nostack   [K>2]] Don't put highest Q on the bottom
+\item[-stacksort [K>2]] Sort each individual's bar vertically
+\item[-halfheight] Output a PDF file half the usual height
+\item[-svg] Output to an SVG file (instead of PDF)
+\item[-pointsize <value>] Scaling factor for point size
+\item[-flip      [K=2]] swap Q values for first and second clusters
+\item[-rotatelabels] Make population labels display vertically
+\item[-labelaxis] Place population labels on the axis
+\end{description}
+
+\emph{[Additional Comments]}
+

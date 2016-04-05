@@ -1,0 +1,917 @@
+\section{3_indiv_minimal.pl}
+\label{sec:3-indiv-minimal.pl}
+
+\subsection{Overview}
+\label{sec:3-indiv-minimal.pl-overview}
+
+\begin{description}
+\item[Usage] ./3_individual.pl <individual columns> < <fileName>
+\item[Purpose] Make sure all individuals are different using a minimal set of information from the genotyped individuals. Practically, this means extracting additional lines from an input file until every individual appears different (or the total input file, whichever comes first)
+\item[Lines of Code] 88
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:3-indiv-minimal.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{5_pop_minimal.pl}
+\label{sec:5-pop-minimal.pl}
+
+\subsection{Overview}
+\label{sec:5-pop-minimal.pl-overview}
+
+\begin{description}
+\item[Usage] ./5_pop_minimal.pl p<P1 name> <P1 ids> p<P2 name> <P2 ids> ...
+\item[Purpose] Make sure all populations are different using a minimal set of information from the genotyped individuals practically, this means extracting additional lines from an input file until every individual within a population appears different to every individual from the other population(s) (or the total input file, whichever comes first)
+\item[Lines of Code] 151
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:5-pop-minimal.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{8_modelfit.pl}
+\label{sec:8-modelfit.pl}
+
+\subsection{Overview}
+\label{sec:8-modelfit.pl-overview}
+
+\begin{description}
+\item[Usage] ./8_modelfit.pl <reference model> <iteration set> <PW file>
+\item[Purpose] scans a marker pairwise comparison file (output like 2_maximal.pl) for the next marker that, in conjunction with previously discovered markers, best fits a reference model
+\item[Lines of Code] 76
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:8-modelfit.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{9_predictive_power.pl}
+\label{sec:9-predictive-power.pl}
+
+\subsection{Overview}
+\label{sec:9-predictive-power.pl-overview}
+
+\begin{description}
+\item[Usage] /9_predictive_power.pl p<P1 name> <P1 cols> p<P2 name> <P2 cols>
+\item[Purpose] Determine the predictive power of each marker, including power to distinguish between two populations outputs a list of markers, and probabilities associated with the distinguishing power of each marker
+\item[Lines of Code] 167
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:9-predictive-power.pl-command-line}
+
+\begin{description}
+\item[-summarise] Only create summary statistics (mean values)
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{addpops2structure.pl}
+\label{sec:addpops2structure.pl}
+
+\subsection{Overview}
+\label{sec:addpops2structure.pl-overview}
+
+\begin{description}
+\item[Usage] ./addpops2structure.pl <pop1Name><pop1Count>_<pop2Name><pop2Count>... < <file>
+\item[Purpose] adds population identifier IDs to a structure file
+\item[Lines of Code] 29
+\item[File size] 850 B
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:addpops2structure.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{affy2simplegt.pl}
+\label{sec:affy2simplegt.pl}
+
+\subsection{Overview}
+\label{sec:affy2simplegt.pl-overview}
+
+\begin{description}
+\item[Usage] ./affy2simplegt.pl <file name>
+\item[Purpose] Converts data from the affymetrix chip format (marker, individual, genotype, QC) to simplegt format.
+\item[Lines of Code] 26
+\item[File size] 843 B
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:affy2simplegt.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{calc_gtcounts.pl}
+\label{sec:calc-gtcounts.pl}
+
+\subsection{Overview}
+\label{sec:calc-gtcounts.pl-overview}
+
+\begin{description}
+\item[Usage] ./calc_gtcounts.pl <file name>
+\item[Purpose] determines per-marker genotype counts for a simplegt formatted text file.
+\item[Lines of Code] 44
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:calc-gtcounts.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{calc_gtfreq.pl}
+\label{sec:calc-gtfreq.pl}
+
+\subsection{Overview}
+\label{sec:calc-gtfreq.pl-overview}
+
+\begin{description}
+\item[Usage] ./calc_gtfreq.pl <file name>
+\item[Purpose] determines per-marker genotype frequencies for a simplegt formatted text file.
+\item[Lines of Code] 60
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:calc-gtfreq.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{coladd.pl}
+\label{sec:coladd.pl}
+
+\subsection{Overview}
+\label{sec:coladd.pl-overview}
+
+\begin{description}
+\item[Usage] ./coladd.pl <file name>
+\item[Purpose] adds the columns of an input file (second column onwards, starting from the second line)
+\item[Lines of Code] 29
+\item[File size] 936 B
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:coladd.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{colmean.pl}
+\label{sec:colmean.pl}
+
+\subsection{Overview}
+\label{sec:colmean.pl-overview}
+
+\begin{description}
+\item[Usage] ./colmean.pl <file name>
+\item[Purpose] averages the columns of an input file (second column onwards, starting from the second line). By default this groups by the first column in the file
+\item[Lines of Code] 64
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:colmean.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{coriell2snpchip.pl}
+\label{sec:coriell2snpchip.pl}
+
+\subsection{Overview}
+\label{sec:coriell2snpchip.pl-overview}
+
+\begin{description}
+\item[Usage] ./coriell2snpchip.pl <.pre File> <.map File>
+\item[Purpose] read in (3+N)xM array (coriell .pre data file notation). Presumed file format is <study>[ -]<personID> 1 <GT1/1> <GT1/2> <GT2/1> <GT2/2> ...
+\item[Lines of Code] 51
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:coriell2snpchip.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{delta_stats.pl}
+\label{sec:delta-stats.pl}
+
+\subsection{Overview}
+\label{sec:delta-stats.pl-overview}
+
+\begin{description}
+\item[Usage] /delta_stats.pl p<P1 name> <P1 cols> p<P2 name> <P2 cols>
+\item[Purpose] just produces delta for each marker
+\item[Lines of Code] 134
+\item[File size] 3 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:delta-stats.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{emp_fst.pl}
+\label{sec:emp-fst.pl}
+
+\subsection{Overview}
+\label{sec:emp-fst.pl-overview}
+
+\begin{description}
+\item[Usage] ./emp_fst.pl p<P1 name> <P1 cols> p<P2 name> <P2 cols> < <file>
+\item[Purpose] Calculates Fst values using pairwise comparisons calculations are carried out for between and within populations, with the resultant statistic being the following: Fst = (mean(between) - mean(mean(within1), mean(within2)) / mean(between))
+\item[Lines of Code] 96
+\item[File size] 3 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:emp-fst.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{fieldrm.pl}
+\label{sec:fieldrm.pl}
+
+\subsection{Overview}
+\label{sec:fieldrm.pl-overview}
+
+\begin{description}
+\item[Usage] ./fieldrm.pl [f1 f2 f3... fn] [options] <file>
+\item[Purpose] removes specified fields from a file
+\item[Lines of Code] 33
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:fieldrm.pl-command-line}
+
+\begin{description}
+\item[-startat [n]] Start removing fields from this field onwards
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{filterdiff.pl}
+\label{sec:filterdiff.pl}
+
+\subsection{Overview}
+\label{sec:filterdiff.pl-overview}
+
+\begin{description}
+\item[Usage] ./filterdiff.pl [options]
+\item[Purpose] Filters out similar genotype lines from a file.
+\item[Lines of Code] 148
+\item[File size] 6 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:filterdiff.pl-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-v <float>] Threshold value for inclusion (Default: 0.5)
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{firstn.pl}
+\label{sec:firstn.pl}
+
+\subsection{Overview}
+\label{sec:firstn.pl-overview}
+
+\begin{description}
+\item[Usage] ./firstn.pl [options] <filename>
+\item[Purpose] extracts the first n lines with a given field repeated
+\item[Lines of Code] 46
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:firstn.pl-command-line}
+
+\begin{description}
+\item[-t <string>] Define field separator
+\item[-f <integer>] Field to consider for repetitions
+\item[-n <integer>] Maximum count per identical field
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{flatten_tex.pl}
+\label{sec:flatten-tex.pl}
+
+\subsection{Overview}
+\label{sec:flatten-tex.pl-overview}
+
+\begin{description}
+\item[Usage] ./flatten_tex.pl <file name>
+\item[Purpose] flattens a .tex file structure to remove include / input statements.
+\item[Lines of Code] 36
+\item[File size] 981 B
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:flatten-tex.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{ged2linkage.pl}
+\label{sec:ged2linkage.pl}
+
+\subsection{Overview}
+\label{sec:ged2linkage.pl-overview}
+
+\begin{description}
+\item[Usage] ./ged2linkage.pl <file name>
+\item[Purpose] creates a linkage formatted pedigree file based on family definitions in a GEDCOM file.
+\item[Lines of Code] 138
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:ged2linkage.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{gt2bayes.pl}
+\label{sec:gt2bayes.pl}
+
+\subsection{Overview}
+\label{sec:gt2bayes.pl-overview}
+
+\begin{description}
+\item[Usage] ./bayes.pl <simplegt file> p<P1 name> <P1 ids> p<P2 name> <P2 ids>
+\item[Purpose] calculate bayesian probability for group assignment, assuming marker independence. Also calculates log(p(max)/p(min)) to determine reliability of group assignment
+\item[Lines of Code] 136
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gt2bayes.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{gt2phase.pl}
+\label{sec:gt2phase.pl}
+
+\subsection{Overview}
+\label{sec:gt2phase.pl-overview}
+
+\begin{description}
+\item[Usage] ./gt2phase.pl < <file name>
+\item[Purpose] convert from simplegt formatted text file input file formatted for PHASE or fastPHASE.
+\item[Lines of Code] 77
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gt2phase.pl-command-line}
+
+\begin{description}
+\item[-nocombine] Don't combine complementary genotypes
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{gt2plink.pl}
+\label{sec:gt2plink.pl}
+
+\subsection{Overview}
+\label{sec:gt2plink.pl-overview}
+
+\begin{description}
+\item[Usage] ./gt2plink.pl <input file> <map file> [options]
+\item[Purpose] Convert from simplegt-formatted file to plink rotated input files
+\item[Lines of Code] 329
+\item[File size] 13 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gt2plink.pl-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-output] output base file name
+\item[-t <character>] map file separator character
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{gtminimal.pl}
+\label{sec:gtminimal.pl}
+
+\subsection{Overview}
+\label{sec:gtminimal.pl-overview}
+
+\begin{description}
+\item[Usage] ./gtminimal.pl -(individual|population) [options] < <input file>
+\item[Purpose] Determine minimal set sizes for an input data set. Data is processed in a linear fashion, taking successive lines and finding out how large an untrained selection of markers needs to be in order to distinguish populations
+\item[Lines of Code] 128
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gtminimal.pl-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-population] Calculate population-based sizes
+\item[-individual] Calculate individual-based sizes
+\item[-verbose] Print out generated hash values during run
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{gtshuffle.pl}
+\label{sec:gtshuffle.pl}
+
+\subsection{Overview}
+\label{sec:gtshuffle.pl-overview}
+
+\begin{description}
+\item[Usage] ./gtshuffle.pl <input file> [options]
+\item[Purpose] Shuffles a simplegt input file, producing output files containing random splits of the popultion
+\item[Lines of Code] 224
+\item[File size] 9 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:gtshuffle.pl-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-output] output base file name
+\item[-r <float>] Proportion of individuals in the first group (Default: 0.5)
+\item[-n <integer>] Number of individuals in the first group (overrides ratio)
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{hardyweinberg.pl}
+\label{sec:hardyweinberg.pl}
+
+\subsection{Overview}
+\label{sec:hardyweinberg.pl-overview}
+
+\begin{description}
+\item[Usage] ./hardyweinberg.pl p<P1 name> <P1 cols> p<P2 name> <P2 cols>
+\item[Purpose] Determines genotype frequencies for each marker, as well as expected frequencies under HW equilibrium. The calculations are done on a per-population basis.
+\item[Lines of Code] 152
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:hardyweinberg.pl-command-line}
+
+\begin{description}
+\item[-summarise] Only generate mean summary statistics
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{linecount.pl}
+\label{sec:linecount.pl}
+
+\subsection{Overview}
+\label{sec:linecount.pl-overview}
+
+\begin{description}
+\item[Usage] ./linecount.pl <sorted, ranked file> > linecount_output.txt
+\item[Purpose] print out the line at which a marker has been seen a particular number of times. The marker is assumed to be in the first field of each line.
+\item[Lines of Code] 17
+\item[File size] 859 B
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:linecount.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{maf_stats.pl}
+\label{sec:maf-stats.pl}
+
+\subsection{Overview}
+\label{sec:maf-stats.pl-overview}
+
+\begin{description}
+\item[Usage] ./maf_stats.pl p<P1 name> <P1 cols> p<P2 name> <P2 cols> ...
+\item[Purpose] calculates allele frequencies, based on MAF of first population (derived from delta_stats.pl).
+\item[Lines of Code] 103
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:maf-stats.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{make_documentation.pl}
+\label{sec:make-documentation.pl}
+
+\subsection{Overview}
+\label{sec:make-documentation.pl-overview}
+
+\begin{description}
+\item[Usage] ./make_documentation.pl <file name>
+\item[Purpose] creates LaTeX documentation for script files.
+\item[Lines of Code] 206
+\item[File size] 7 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:make-documentation.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{makemdrcfg.pl}
+\label{sec:makemdrcfg.pl}
+
+\subsection{Overview}
+\label{sec:makemdrcfg.pl-overview}
+
+\begin{description}
+\item[Usage] 
+\item[Purpose] generates a configuration file for the MDR/pMDR programs
+\item[Lines of Code] 158
+\item[File size] 7 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:makemdrcfg.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{mdr2markerstats.pl}
+\label{sec:mdr2markerstats.pl}
+
+\subsection{Overview}
+\label{sec:mdr2markerstats.pl-overview}
+
+\begin{description}
+\item[Usage] ./mdr2markerstats.pl <MDR output file>
+\item[Purpose] retrieves marker values from MDR formatted file (as produced by running MDR from the command line), and produces a list of SNPs with mean association values
+\item[Lines of Code] 53
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:mdr2markerstats.pl-command-line}
+
+\begin{description}
+\item[-nosearch] disable searching for Landscape string
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{mdrpermute.pl}
+\label{sec:mdrpermute.pl}
+
+\subsection{Overview}
+\label{sec:mdrpermute.pl-overview}
+
+\begin{description}
+\item[Usage] ./mdrpermute.pl <input file> <number of permutations>
+\item[Purpose] permutes the case (last) column of a MDR formatted text file
+\item[Lines of Code] 91
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:mdrpermute.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{nwayfilter.pl}
+\label{sec:nwayfilter.pl}
+
+\subsection{Overview}
+\label{sec:nwayfilter.pl-overview}
+
+\begin{description}
+\item[Usage] ./nwayfilter.pl [options] <marker statistics file>
+\item[Purpose] Does an n-way comparison of SNPs, assuming a given 1-way complexity
+\item[Lines of Code] 80
+\item[File size] 3 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:nwayfilter.pl-command-line}
+
+\begin{description}
+\item[-c <integer>] equivalent complexity to this many one-way interactions
+\item[-n <integer>] number of interactions to consider
+\item[-v] be verbose about what is being done
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{plink2gt.pl}
+\label{sec:plink2gt.pl}
+
+\subsection{Overview}
+\label{sec:plink2gt.pl-overview}
+
+\begin{description}
+\item[Usage] ./plink2gt.pl <.tped file name>
+\item[Purpose] Convert from plink rotated input files to simplegt-formatted files
+\item[Lines of Code] 66
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:plink2gt.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{resort.pl}
+\label{sec:resort.pl}
+
+\subsection{Overview}
+\label{sec:resort.pl-overview}
+
+\begin{description}
+\item[Usage] ./resort.pl <file name>
+\item[Purpose] sorts fields from a file, based on provided column numbers in arguments
+\item[Lines of Code] 24
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:resort.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{rsfilter.pl}
+\label{sec:rsfilter.pl}
+
+\subsection{Overview}
+\label{sec:rsfilter.pl-overview}
+
+\begin{description}
+\item[Usage] ./rsfilter.pl <marker1> <marker2> ... [options] < <file name>
+\item[Purpose] hunts (quickly) for a set of markers in one pass of a file.
+\item[Lines of Code] 91
+\item[File size] 3 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:rsfilter.pl-command-line}
+
+\begin{description}
+\item[-r] invert filter (i.e. select markers to exclude)
+\item[-o] order by selection
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{snpchip2linkage.pl}
+\label{sec:snpchip2linkage.pl}
+
+\subsection{Overview}
+\label{sec:snpchip2linkage.pl-overview}
+
+\begin{description}
+\item[Usage] ./snpchip2linkage.pl <marker location file> <genotype file>
+\item[Purpose] converts from a simplegt formatted file into a linkage formatted file.
+\item[Lines of Code] 84
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpchip2linkage.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{snpchip2mdr.pl}
+\label{sec:snpchip2mdr.pl}
+
+\subsection{Overview}
+\label{sec:snpchip2mdr.pl-overview}
+
+\begin{description}
+\item[Usage] ./snpchip2mdr.pl [options] <file name>
+\item[Purpose] convert from simplegt formatted text file to MDR formatted text file.
+\item[Lines of Code] 74
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpchip2mdr.pl-command-line}
+
+\begin{description}
+\item[-pMDR] format for pMDR instead of MDR
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{snpchip2structure.pl}
+\label{sec:snpchip2structure.pl}
+
+\subsection{Overview}
+\label{sec:snpchip2structure.pl-overview}
+
+\begin{description}
+\item[Usage] ./snpchip2structure.pl < <file name>
+\item[Purpose] convert from simplegt formatted text file input file formatted for structure.
+\item[Lines of Code] 73
+\item[File size] 2 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpchip2structure.pl-command-line}
+
+\begin{description}
+\item[-nocombine] Don't combine complementary genotypes
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{snpimpute.pl}
+\label{sec:snpimpute.pl}
+
+\subsection{Overview}
+\label{sec:snpimpute.pl-overview}
+
+\begin{description}
+\item[Usage] ./snpimpute.pl [options] < <file name>
+\item[Purpose] infers unknown genotypes using a bayesian approach
+\item[Lines of Code] 475
+\item[File size] 20 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snpimpute.pl-command-line}
+
+\begin{description}
+\item[-nohet] don't do heterozygote calculations
+\item[-probs] print prior/conditional probabilities
+\item[-inferall] infer all genotypes, rather than just unknown ones
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{snplookup.pl}
+\label{sec:snplookup.pl}
+
+\subsection{Overview}
+\label{sec:snplookup.pl-overview}
+
+\begin{description}
+\item[Usage] ./snplookup.pl < <file name>
+\item[Purpose] retrieves chromosome location information from Entrez
+\item[Lines of Code] 27
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snplookup.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{snprank.pl}
+\label{sec:snprank.pl}
+
+\subsection{Overview}
+\label{sec:snprank.pl-overview}
+
+\begin{description}
+\item[Usage] ./snprank.pl <bootstrap-sorted file> > output_ranked.txt
+\item[Purpose] ranks markers in a bootstrap-sorted file. Expected input is the output of bootstrap.r, sorted first by bootstrap, then by marker information statistic.
+\item[Lines of Code] 18
+\item[File size] 871 B
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:snprank.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{sorted_affy2simplegt.pl}
+\label{sec:sorted-affy2simplegt.pl}
+
+\subsection{Overview}
+\label{sec:sorted-affy2simplegt.pl-overview}
+
+\begin{description}
+\item[Usage] ./sorted_affy2simplegt.pl <file name>
+\item[Purpose] converts from affymetrix formatted file to simplegt formatted file.
+\item[Lines of Code] 34
+\item[File size] 1 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:sorted-affy2simplegt.pl-command-line}
+
+This script has no additional command line options.
+
+\emph{[Additional Comments]}
+
+\section{tfam_gender.pl}
+\label{sec:tfam-gender.pl}
+
+\subsection{Overview}
+\label{sec:tfam-gender.pl-overview}
+
+\begin{description}
+\item[Usage] ./tfam_gender.pl <sample file> [options] < <input file>
+\item[Purpose] modify gender data using sample data file
+\item[Lines of Code] 136
+\item[File size] 4 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:tfam-gender.pl-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-nowarn] Don't warn about missing individuals in tfam file
+\item[-phenomarker <file>] Produce phenotypes as simplegt format
+\end{description}
+
+\emph{[Additional Comments]}
+
+\section{wdb2svg.pl}
+\label{sec:wdb2svg.pl}
+
+\subsection{Overview}
+\label{sec:wdb2svg.pl-overview}
+
+\begin{description}
+\item[Usage] ./worldmap2svg.pl <input file(s)> [options]
+\item[Purpose] convert vector information formatted in plain-text world databank format into an SVG file. Details of this format can be found at http://www.evl.uic.edu/pape/data/WDB/
+\item[Lines of Code] 459
+\item[File size] 20 KiB
+\end{description}
+
+\subsection{Command Line Options}
+\label{sec:wdb2svg.pl-command-line}
+
+\begin{description}
+\item[-help] Only display this help message
+\item[-lat <float>] Set central latitude
+\item[-long <float>] Set central longitude
+\item[-res <float>] Resolution of line nodes, in degrees
+\item[-mark <float>,<float>] Mark a point on the map (E/W, N/S)
+\item[-projection <name>] Change projection function, (x,y) = f(lat,long)
+\end{description}
+
+\emph{[Additional Comments]}
+
