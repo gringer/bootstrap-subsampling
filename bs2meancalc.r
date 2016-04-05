@@ -1,5 +1,7 @@
 #!/usr/bin/Rscript
 
+## bs2meancalc.r -- calculates mean / SD from bootstrap summary results
+
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
 
 

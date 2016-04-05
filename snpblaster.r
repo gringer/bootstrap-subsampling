@@ -2,10 +2,11 @@
 
 ## Author: David Eccles (gringer), 2007 <programming@gringer.org>
 
+## snpblaster.r -- Calculates location differences to determine which markers can
+## be removed without much loss
+
 usage <- function(){
-  cat("Snpblaster -- Calculates location differences to determine\n",
-      "              which markers can be removed without much loss.\n",
-      "usage: ./snpblaster.r <file> [-size <windowSize>]\n",
+  cat("usage: ./snpblaster.r <file> [-size <windowSize>]\n",
       "Expects a CSV file with headings: [Marker],Delta,Mutation,Chromosome,Location\n",
       sep="");
 }

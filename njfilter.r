@@ -1,6 +1,6 @@
 #!/usr/bin/Rscript
 
-## njfilter -- iteratively adds SNPs that don't have a genotype
+## njfilter.r -- iteratively adds SNPs that don't have a genotype
 ## profile similar to SNPs already added to a set of informative SNPs
 
 ## The most informative SNP is always selected, and each additional

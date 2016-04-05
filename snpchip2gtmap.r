@@ -1,13 +1,13 @@
 #!/usr/bin/Rscript
 
-## snpchp2gtmap.r
-
-## creates a chromosome location diagram for a sequence of SNPs, with
+## snpchip2gtmap.r -- Creates a chromosome location diagram for a sequence of SNPs, with
 ## a genotype summary below
 
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
 
-## usage: ./snpchip2gtmap.r <genotype file> <SNP location file>
+usage <- function(){
+  cat("usage: ./snpchip2gtmap.r <genotype file> <SNP location file>\n");
+}
 
 argLoc <- 1;
 gtFile <- FALSE;

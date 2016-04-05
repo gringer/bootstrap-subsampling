@@ -1,6 +1,6 @@
 #!/usr/bin/Rscript
 
-## stats2contour.r -- converts a delta summary file into a Minor
+## contour-MA.r -- converts a delta summary file into a Minor
 ## Allele Frequency contour graph.
 
 ## Author: David Eccles (gringer), 2014 <bioinformatics@gringene.org>

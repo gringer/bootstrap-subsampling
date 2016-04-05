@@ -1,8 +1,6 @@
 #!/usr/bin/Rscript
 
-## pwmatrix2pdf.r
-
-## Derived from pwsummary2pdf. Converts a pairwise matrix (such as
+## pwmatrix2pdf.r -- Converts a pairwise matrix (such as
 ## that generated from gt2pw.r) into a heatmap PDF file.
 ##
 ## usage: ./pwmatrix2pdf.r <top/right file> [bottom/left file]

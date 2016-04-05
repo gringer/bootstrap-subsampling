@@ -1,6 +1,6 @@
 #!/usr/bin/Rscript
 
-#usage ./recombine.r
+## recombine.r -- carries out a simulated recombination of chromosomes
 
 ## Author: David Eccles (gringer), 2008 <programming@gringer.org>
 

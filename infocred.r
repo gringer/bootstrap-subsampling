@@ -2,6 +2,8 @@
 
 ## Author: David Eccles (gringer), 2007 <programming@gringer.org>
 
+## infocred.r -- carries out a difference-of-means test for difference between two populations
+
 source("/itsshared/phd/common.r");
 
 usage <- function(){

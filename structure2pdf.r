@@ -2,7 +2,7 @@
 
 ## Author: David Eccles (gringer), 2007-2016 <bioinformatics@gringene.org>
 
-#usage ./structure2pdf.r <file> <name1> <break1> <name2> <break2> ... <nameN>
+## structure2pdf.r -- generates box/dot plot for results from structure
 
 usage <- function(){
   cat("usage: ./structure2pdf.r",

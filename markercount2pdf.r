@@ -2,6 +2,13 @@
 
 ## Author: David Eccles (gringer), 2008 <programming@gringer.org>
 
+## markercount2pdf.r -- generates plot of marker counts versus number of bootstraps
+
+usage <- function(){
+  cat("usage: ./markercount2pdf.r <file>\n");
+}
+
+
 marker.counts <- read.table(commandArgs(TRUE)[1], row.names = 2);
 
 counts.df <- as.data.frame(table(marker.counts));

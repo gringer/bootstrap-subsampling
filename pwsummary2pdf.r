@@ -1,13 +1,14 @@
 #!/usr/bin/Rscript
 
-## pwsummary2pdf.r
+## pwsummary2pdf.r -- Converts a pairwise summary (such as that generated from
+## pwsummary.txt in 2_maximal.pl) into a heatmap PDF file
 
 ## Author: David Eccles (gringer), 2008 <programming@gringer.org>
 
-## Converts a pairwise summary (such as that generated from
-## pwsummary.txt in 2_maximal.pl) into a heatmap PDF file
-## usage: ./pwsummary2pdf.r <top/right file> [bottom/left file]
-## [creates output_pwheatmap.(pdf|svg)]
+usage <- function(){
+  cat("usage: ./pwsummary2pdf.r <top/right file> [bottom/left file]\n");
+  cat("[creates output_pwheatmap.(pdf|svg)]\n");
+}
 
 argLoc <- 1;
 topFile <- FALSE;

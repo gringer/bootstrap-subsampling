@@ -4,7 +4,7 @@ source("/itsshared/phd/common.r");
 
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
 
-## poscounts -- determine clinical parameters for structure file outputs
+## poscounts.r -- determine clinical parameters for structure file outputs
 ## TP: True positive (count of "positive" results that are clinically positive)
 ## FN: False negative (count of "negative" results that are clinically positive)
 ## TN: True negative (count of "negative" results that are clinically negative)

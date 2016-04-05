@@ -2,6 +2,8 @@
 
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
 
+## error.r -- generates error plot (false/true positive/negative) for a diagnostic test
+
 usage <- function(){
   cat("usage: ./error.r",
       "<file> <Case/Control Split location> [-flip]]\n");

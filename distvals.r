@@ -2,6 +2,12 @@
 
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
 
+## distvals.r -- generates a genotype distance matrix from genotype data
+
+usage <- function(){
+  cat("usage: ./distvals.r <file>\n");
+}
+
 if(length(commandArgs(TRUE)) < 1){
   cat("Error: No file specified on the command line");
   quit(save="no",status = 1);

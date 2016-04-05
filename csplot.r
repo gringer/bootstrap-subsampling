@@ -1,5 +1,7 @@
 #!/usr/bin/Rscript
 
+## csplot.r -- generates a chromosome "manhattan" plot for a genome-wide statistic
+
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
 
 usage <- function(){

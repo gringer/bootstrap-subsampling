@@ -2,8 +2,7 @@
 
 ## Author: David Eccles (gringer), 2008 <programming@gringer.org>
 
-# Derived from 2_maximal.pl/gt2pw.pl -- Calculate allele sharing
-# values across all markers for all individuals in the input file
+## gt2pw.r -- Calculate allele sharing values across all markers for all individuals in the input file
 
 # usage: ./gt2pw.pl <input>
 # where <input> is formatted as follows

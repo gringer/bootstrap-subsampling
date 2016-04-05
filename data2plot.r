@@ -1,9 +1,13 @@
 #!/usr/bin/Rscript
 
-# data2plot.r -- takes as input a space-separated text file, converts
-# it into a plot
+## data2plot.r -- takes as input a space-separated text file, converts
+## it into a plot
 
 ## Author: David Eccles (gringer), 2009 <programming@gringer.org>
+
+usage <- function(){
+  cat("usage: cat <file> | ./data2plot.r( p<name> <range from> <range to>)*\n");
+}
 
 popNames <- NULL;
 popLimits <- NULL;

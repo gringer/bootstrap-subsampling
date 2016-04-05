@@ -529,7 +529,7 @@ foreach my $marker1 (@markers){
                 $gtratio = 1;
             }
         }
-        if($gtratio > $folddiff){ # by trial/error with IMS/RHAS dataset
+        if($gtratio > $folddiff){ # by trial/error with IMS/HBM dataset
             $gtInf = "AA";
         }
         elsif($gtratio < (1/$folddiff)){

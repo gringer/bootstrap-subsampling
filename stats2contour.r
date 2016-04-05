@@ -2,11 +2,14 @@
 
 ## Author: David Eccles (gringer), 2008 <programming@gringer.org>
 
+## stats2contour.r -- converts a delta summary file into a Minor Allele Frequency contour graph
+
 source('/itsshared/phd/common.r')
 library(cairoDevice)
 
-# usage ./stats2contour.r <file>
-# converts a delta summary file into a Minor Allele Frequency contour graph
+usage <- function(){
+  cat("usage: ./stats2contour.r <file>\n");
+}
 
 table.delta <- read.table(commandArgs(TRUE)[1],
                           header = TRUE, row.names = 1)

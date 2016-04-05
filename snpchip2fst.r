@@ -1,5 +1,7 @@
 #!/usr/bin/Rscript
 
+## snpchip2fst.r -- calculates F statistics from a simplegt file
+
 #usage ./snpchip2fst.r <file> (p<name> <range from> <range to>)+ [options]
 
 ## Author: David Eccles (gringer), 2008 <programming@gringer.org>

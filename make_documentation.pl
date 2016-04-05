@@ -2,7 +2,7 @@
 
 # make_documentation.pl -- creates LaTeX documentation for script files.
 
-# Author: David Eccles (gringer), 2009 <programming@gringer.org>
+# Author: David Eccles (gringer), 2009-2016 <bioinformatics@gringene.org>
 
 use strict;
 use warnings;
@@ -55,7 +55,7 @@ while(@fileNames){
             if(/David Eccles \(gringer\), 20[0-9][0-9]/){
                 $nameCredit = 1; # true
             }
-            if(/sub usage {/){
+            if(/sub usage \{/){
                 $foundItems{"usage"} = 1;
                 $usageSection = 1; # true
             }
@@ -123,7 +123,7 @@ while(@fileNames){
             if(/David Eccles \(gringer\), 20[0-9][0-9]/){
                 $nameCredit = 1; # true
             }
-            if(/usage <- function\(\){/){
+            if(/usage <- function\(\)\{/){
                 $foundItems{"usage"} = 1;
                 $usageSection = 1; # true
             }
@@ -186,6 +186,8 @@ while(@fileNames){
         exit(3);
     }
     my $fileSize = qx{wc -c $currentFile};
+    my $fileSecName = $currentFile;
+    $fileSecName =~ s/_/-/g;
     $fileSize =~ s/ .*$//;
     if($fileSize > 1024){
         $fileSize = sprintf("%d",$fileSize / 1024)." KiB";
@@ -193,9 +195,9 @@ while(@fileNames){
         $fileSize = sprintf("%d",$fileSize)." B";
     }
     printf("\\section{%s}\n", $currentFile);
-    printf("\\label{sec:%s}\n\n", $currentFile);
+    printf("\\label{sec:%s}\n\n", $fileSecName);
     printf("\\subsection{Overview}\n");
-    printf("\\label{sec:%s-overview}\n\n", $currentFile);
+    printf("\\label{sec:%s-overview}\n\n", $fileSecName);
     printf("\\begin{description}\n");
     printf("\\item[Usage] %s\n", $foundItems{"fileUsage"});
     printf("\\item[Purpose] %s\n", $foundItems{"oneLiner"});
@@ -203,7 +205,7 @@ while(@fileNames){
     printf("\\item[File size] %s\n", $fileSize);
     printf("\\end{description}\n\n");
     printf("\\subsection{Command Line Options}\n");
-    printf("\\label{sec:%s-command-line}\n\n", $currentFile);
+    printf("\\label{sec:%s-command-line}\n\n", $fileSecName);
     if(exists($foundItems{"commandLineOptions"})){
         printf("\\begin{description}\n");
         printf($foundItems{"commandLineOptions"});
